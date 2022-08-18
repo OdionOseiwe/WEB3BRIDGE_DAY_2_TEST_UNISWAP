@@ -31,7 +31,7 @@ async function main() {
 
     await WETH.approve(UNIRouter, amountOut);
 
-    const usdtBalbefore = await WETH.balanceOf(impersonatedSigner.address);
+    const usdtBalbefore = await WETH.balanceOf(USDTHolder);
     const ethbalbefore = await impersonatedSigner.getBalance();
     console.log("beforeUsdt...." , usdtBalbefore);
     console.log("beforeWeth", ethbalbefore);
@@ -43,7 +43,7 @@ async function main() {
 
     ROUTER.swapETHForExactTokens(amountOut, [wethAdress, USDAddress], USDTHolder, deadline, { value: _value });
 
-    const usdtBalafter = await WETH.balanceOf(impersonatedSigner.address);
+    const usdtBalafter = await WETH.balanceOf(USDTHolder);
     const ethbalafter= await impersonatedSigner.getBalance();
     console.log("afterUsdt...." , usdtBalafter);
     console.log("afterWeth", ethbalafter);
