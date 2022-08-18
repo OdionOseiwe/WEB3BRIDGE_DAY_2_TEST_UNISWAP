@@ -7,7 +7,7 @@ async function main() {
     const DAIAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
     const UNIRouter = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
     const amountIn = 100;
-    const amountOutMin = 0; 
+    const amountOutMin = 10; 
 
     const helpers = require("@nomicfoundation/hardhat-network-helpers");
     const DAIHOLDER = "0x3b74B91360d7c1B59DC157dCfe01aBae72557df2";
